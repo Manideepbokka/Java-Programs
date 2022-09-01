@@ -1,0 +1,10 @@
+package com.java.collections.ArrayList;
+
+public class CreateArrayListFromCollectionsExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

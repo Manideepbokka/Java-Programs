@@ -1,0 +1,7 @@
+package com.manideep.first.app.rest;
+
+@RestController
+public class StudentController {
+
+	
+}

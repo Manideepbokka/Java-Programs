@@ -1,0 +1,5 @@
+package com.manideep.first.app.rest;
+
+public class HelloWorldController {
+
+}

@@ -1,0 +1,5 @@
+package com.manideep.springboot.cruddemo.entity;
+
+public class Employee {
+
+}

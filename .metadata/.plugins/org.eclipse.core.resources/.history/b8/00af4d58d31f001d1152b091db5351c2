@@ -1,0 +1,10 @@
+package com.luv2code.springdemo.entity;
+
+public class Student {
+
+	private String firstname;
+	
+	private String lastname;
+	
+	
+}

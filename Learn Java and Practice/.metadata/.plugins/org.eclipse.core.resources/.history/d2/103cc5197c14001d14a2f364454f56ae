@@ -1,0 +1,29 @@
+package com.java.methodreferences;
+import java.util.function.BiFunction;
+import java.util.function.Function;
+import java.math.*;
+public class MethodReferencesDemo {
+	public static int addition(int a,int b)
+	{
+		return (a+b);
+	}
+
+	public static void main(String[] args) {
+		//1.MethodReferences to a static method
+		//lambda expression **sqrt is static method.
+		Function<Integer,Double> fun= (a)->Math.sqrt(a);
+		System.out.println(fun.apply(25));
+		//methodreference
+		Function<Integer,Double> funmethref= Math::sqrt;
+		System.out.println(funmethref.apply(25));
+		//lambda
+		BiFunction<Integer,Integer,Integer> biflam=(a,b)->MethodReferencesDemo.addition(a,b);
+		System.out.println(biflam.apply(10, 15));
+		//methodreference
+		BiFunction<Integer,Integer,Integer> biflammethodref=MethodReferencesDemo::addition;
+		System.out.println(biflammethodref.apply(10, 15));
+		
+
+	}
+
+}

@@ -1,0 +1,28 @@
+package com.java.collections.hashmap;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class CreateHashMapExample {
+
+	public static void main(String[] args) {
+		Map<String,Integer> ms=new HashMap<>();
+		ms.put("Manideep", 1);
+		ms.put("Bokka", 2);
+		ms.put("Victor", 3);
+		ms.put("Nikhil", 4);
+		ms.put("Karna", 5);
+		ms.put(null, 6);
+		
+		
+		System.out.println(ms);
+		
+		System.out.println(ms.isEmpty());
+		System.out.println(ms.size());
+		System.out.println(ms.containsKey("Victor"));
+		System.out.println(ms.containsValue(5));
+
+	}
+
+}

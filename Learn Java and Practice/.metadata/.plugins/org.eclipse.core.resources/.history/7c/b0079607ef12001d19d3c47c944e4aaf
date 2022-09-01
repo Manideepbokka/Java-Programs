@@ -1,0 +1,21 @@
+package com.java.collections.hashmap;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class CreateHashMapExample {
+
+	public static void main(String[] args) {
+		Map<String,Integer> ms=new HashMap<>();
+		ms.put("Manideep", 1);
+		ms.put("Bokka", 2);
+		ms.put("Victor", 3);
+		ms.put("Nikhil", 4);
+		ms.put("Karna", 5);
+		
+		System.out.println(ms);
+		
+
+	}
+
+}

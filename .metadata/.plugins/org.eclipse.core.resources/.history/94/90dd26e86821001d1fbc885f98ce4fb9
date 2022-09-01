@@ -1,0 +1,5 @@
+package com.manideep.springboot.rest;
+
+public class FunRestController {
+
+}

@@ -1,0 +1,19 @@
+package com.java.collections.ArrayList;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CreateArrayListFromCollectionsExample {
+
+	public static void main(String[] args) {
+		List<Integer> ffiprimenum=new ArrayList<>();
+		ffiprimenum.add(2);
+		ffiprimenum.add(3);
+		ffiprimenum.add(5);
+		ffiprimenum.add(7);
+		ffiprimenum.add(11);
+		
+
+	}
+
+}

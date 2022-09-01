@@ -1,0 +1,17 @@
+package com.java.methodreferences;
+import java.util.function.Function;
+import java.math.*;
+public class MethodReferencesDemo {
+
+	public static void main(String[] args) {
+		//1.MethodReferences to a static method
+		//lambda expression
+		Function<Integer,Double> fun= (a)->Math.sqrt(a);
+		System.out.println(fun.apply(25));
+		//methodreference
+		Function<Integer,Double> funmethref= Math::sqrt;
+		System.out.println(funmethref.apply(25));
+
+	}
+
+}

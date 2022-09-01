@@ -1,0 +1,10 @@
+package com.manideep.springboot.cruddemo.dao;
+
+import java.util.List;
+
+import com.manideep.springboot.cruddemo.entity.Employee;
+
+public interface EmployeeDAO {
+
+	public List<Employee> findAll();
+}

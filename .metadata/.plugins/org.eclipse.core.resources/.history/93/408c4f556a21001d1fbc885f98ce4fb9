@@ -1,0 +1,5 @@
+package com.manideep.springboot.demo.mycoolapplication.rest;
+
+public class FunRestController {
+
+}

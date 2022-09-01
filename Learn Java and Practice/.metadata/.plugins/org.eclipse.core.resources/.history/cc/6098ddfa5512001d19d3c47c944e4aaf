@@ -1,0 +1,17 @@
+package com.java.collections.ArrayList;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class AccessElementsFromArrayListElements {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<String> li=new ArrayList<>();
+		
+		System.out.println(li.isEmpty());
+		
+
+	}
+
+}

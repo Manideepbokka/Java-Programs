@@ -1,0 +1,31 @@
+package com.java.streamapi;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class StreamListSorting {
+
+	public static void main(String[] args) {
+		List<String> fruits=new ArrayList<>();
+		fruits.add("Banana");
+		fruits.add("Apple");
+		fruits.add("Mango");
+		fruits.add("Sapota");
+		//ascending order
+		List<String> sortedlist=fruits.stream().sorted(Comparator.naturalOrder()).collect(Collectors.toList());
+		System.out.println(sortedlist);
+		
+		List<String> sortedlist1=fruits.stream().sorted().collect(Collectors.toList());
+		System.out.println(sortedlist1);
+		
+		List<String> sortedlist2=fruits.stream().sorted((o1,o2)->o1.compareTo(o2)).collect(Collectors.toList());
+		System.out.println(sortedlist2);
+		
+		//descending order
+		
+
+	}
+
+}

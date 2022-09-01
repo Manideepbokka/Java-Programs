@@ -1,0 +1,60 @@
+package com.manideep.springboot.cruddemo.dao;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.manideep.springboot.cruddemo.entity.Employee;
+
+@Repository
+public class EmployeeDAOJpaImpl implements EmployeeDAO {
+
+	private EntityManager entityManag;
+	
+	@Autowired
+	public EmployeeDAOJpaImpl(EntityManager entityManag)
+	{
+		this.entityManag=entityManag;
+	}
+	@Override
+	public List<Employee> findAll() {
+		// TODO Auto-generated method stub
+		Query q=entityManag.createQuery("from Employee");
+		
+		List<Employee> emps=q.getResultList();
+		
+		return emps;
+	}
+
+	@Override
+	public Employee findbyId(int theId) {
+		// TODO Auto-generated method stub
+		
+		Employee theemp=entityManag.find(Employee.class,theId);
+		
+		return theemp;
+	}
+
+	@Override
+	public void save(Employee theEmploee) {
+		// TODO Auto-generated method stub
+		Employee emp=entityManag.merge(theEmploee);
+		theEmploee.setId(emp.getId());
+
+	}
+
+	@Override
+	public void deleteById(int theId) {
+		// TODO Auto-generated method stub
+		
+		Query thequery=entityManag.createQuery("delete from Employee where id=:employeeId");
+		thequery.setParameter("employeeId",theId);
+		thequery.executeUpdate();
+
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.manideep.springboot.cruddemo.rest;
+
+public class EmployeeRestController {
+
+}

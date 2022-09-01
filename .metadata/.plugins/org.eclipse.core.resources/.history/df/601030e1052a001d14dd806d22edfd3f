@@ -1,0 +1,29 @@
+package com.manideep.javaannotations;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+public class SwimCoach implements Coach {
+	@Autowired
+	//@Qualifier("restFortuneService")
+	private FortuneService thefs;
+	
+	
+
+	public SwimCoach(FortuneService thefs) {
+		this.thefs = thefs;
+	}
+
+	@Override
+	public String getDailyWorkout() {
+		// TODO Auto-generated method stub
+		return "swim for 30 mins daily";
+	}
+
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return thefs.getDailyFortune();
+	}
+
+}

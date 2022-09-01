@@ -1,0 +1,28 @@
+package com.manideep.javaannotations;
+
+import org.springframework.stereotype.Component;
+@Component
+public class SwimCoach implements Coach {
+	
+	
+	private FortuneService thefs;
+	
+	
+
+	public SwimCoach(FortuneService thefs) {
+		this.thefs = thefs;
+	}
+
+	@Override
+	public String getDailyWorkout() {
+		// TODO Auto-generated method stub
+		return "swim for 30 mins daily";
+	}
+
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return thefs.getDailyFortune();
+	}
+
+}

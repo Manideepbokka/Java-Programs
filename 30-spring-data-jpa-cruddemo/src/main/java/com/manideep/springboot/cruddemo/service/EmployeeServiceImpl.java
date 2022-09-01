@@ -1,0 +1,65 @@
+package com.manideep.springboot.cruddemo.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+
+import com.manideep.springboot.cruddemo.dao.EmployeeRepository;
+import com.manideep.springboot.cruddemo.entity.Employee;
+
+@Service
+public class EmployeeServiceImpl implements EmployeeService {
+
+	
+	private EmployeeRepository emprepo;
+	
+	@Autowired
+	public EmployeeServiceImpl(EmployeeRepository emprepo)
+	{
+		this.emprepo=emprepo;
+	}
+	@Override
+	@Transactional
+	public List<Employee> findAll() {
+		
+		return emprepo.findAll();
+	}
+
+	@Override
+	
+	public Employee findById(int theId) {
+		// TODO Auto-generated method stub
+		Optional<Employee> result = emprepo.findById(theId);
+		Employee theemp=null;
+		if(result.isPresent())
+		{
+			theemp=result.get();
+		}
+		else
+		{
+			throw new RuntimeException("Did not find employee id - "+theId);
+		}
+		return theemp;
+	}
+
+	@Override
+	
+	public void save(Employee theEmploee) {
+		// TODO Auto-generated method stub
+      emprepo.save(theEmploee);
+	}
+
+	@Override
+	
+	public void deleteById(int theId) {
+		// TODO Auto-generated method stub
+			
+		emprepo.deleteById(theId);
+	}
+
+}

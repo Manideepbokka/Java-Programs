@@ -1,0 +1,6 @@
+package com.manideep.springboot.cruddemo.dao;
+
+
+public class EmployeeDAO {
+
+}

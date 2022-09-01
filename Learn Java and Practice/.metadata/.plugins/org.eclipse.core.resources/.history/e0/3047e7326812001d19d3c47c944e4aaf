@@ -1,0 +1,19 @@
+package com.java.iterations;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class SortList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<Integer> nwl=new ArrayList<Integer>();
+		nwl.add(10);
+		nwl.add(30);
+		nwl.add(20);
+		nwl.add(50);
+		nwl.add(40);
+		
+	}
+
+}

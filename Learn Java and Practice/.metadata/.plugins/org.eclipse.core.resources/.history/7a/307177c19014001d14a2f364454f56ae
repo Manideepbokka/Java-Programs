@@ -1,0 +1,13 @@
+package com.java.optional;
+import java.util.Optional;
+public class OptionalDemoExample {
+
+	public static void main(String[] args) {
+		// Of,empty,OfNullable
+		Optional<Object> emptyOptional=Optional.empty();
+		System.out.println(emptyOptional);
+		
+
+	}
+
+}

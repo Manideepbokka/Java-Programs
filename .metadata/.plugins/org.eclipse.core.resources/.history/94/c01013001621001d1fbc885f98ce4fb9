@@ -1,0 +1,47 @@
+
+public class Nikhil {
+	 public List<Integer> removedups(List<Integer> abc)
+	    {
+	        Collections.sort(abc);
+	        List<Integer> ans;
+	        int i=0;
+	        int j=1;
+	        while(i<j)
+	        {
+	            if (abc.get(i)==abc.get(j))
+	            {
+	                if(ans.contains(i))
+	                {
+	                    i++;
+	                    j++;
+	                }
+	                else
+	                {
+	                ans.add(i);
+	                i++;
+	                j++; 
+	                }
+
+	            }
+	            if (abc.get(i)!=abc.get(j))
+	            {
+	                ans.add(i);
+	                ans.add(j);
+	                i++;
+	                j++;
+	            }
+	        }
+	        return null;
+	    }
+		public static void main(String[] args)
+		{
+			
+			List<Integer> a1=Arrays.asList(1,2,3,2,3,5,4,5);
+			List<Integer> a2=Arrays.asList(6,3,4,7,8,7,10,6);
+			a1.addAll(a2);
+			
+			HashSet<Integer> h1=new HashSet<>(a1);
+			
+			System.out.println(h1);
+		}
+}
